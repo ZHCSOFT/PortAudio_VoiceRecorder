@@ -3,7 +3,7 @@ set(CMAKE_CXX_STANDARD 17)
 message(STATUS "Building Recorder")
 
 if(UNIX)
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -ldl")    
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -ldl")    
   SET(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fprofile-arcs -ftest-coverage -fPIC -O0")
 endif()
 
@@ -11,7 +11,7 @@ include_directories(../portaudio-19.7.0/include)
 link_directories(../portaudio-19.7.0/lib)
 
 #Set Target Name
-set(target_name USAudio)
+set(target_name Recorder)
 
 #Set Compile Definition
 set(defines "SCAUDIO_DLLIMPL")
@@ -78,7 +78,7 @@ target_include_directories(${target_name}
 
 target_link_libraries(${target_name}
   PUBLIC ${headers_target}
-	PUBLIC ${system_libs} ${internal_libs} ${external_libs}
+  PUBLIC ${system_libs} ${internal_libs} ${external_libs}
 )
 
 # set_property(GLOBAL PROPERTY INCLUDE_LIB_USAUDIO ${CMAKE_CURRENT_SOURCE_DIR}/include)
