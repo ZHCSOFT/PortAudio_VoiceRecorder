@@ -6,8 +6,8 @@
 
 class AudioDevice;
 
-#ifndef __USAUDIOFORAMT_H__
-#define __USAUDIOFORAMT_H__
+#ifndef __AUDIODATAFORAMT_H__
+#define __AUDIODATAFORAMT_H__
 enum class AudioDataFormat
 {
     Unknown,
